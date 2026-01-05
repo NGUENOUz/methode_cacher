@@ -21,10 +21,10 @@ function App() {
       {/* <LanguageSwitcher currentLanguage={language} onLanguageChange={setLanguage} /> */}
 
       <main>
-        {/* <StickyCTA 
+         <StickyCTA 
         currentPrice={t.hero.currentPrice} 
         ctaText={t.hero.ctaPrimary} 
-      /> */}
+      /> 
         <HeroSection t={t.hero} />
         <AuthorSection />
         {/* Conteneur pour les sections avec scroll animation */}
