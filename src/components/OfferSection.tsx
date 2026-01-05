@@ -61,7 +61,7 @@ export const OfferSection = ({ t, countdownText, guarantees }: any) => {
             </div>
 
             <button
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open('https://qopvpcyv.mychariow.shop/prd_nqf4um/checkout')}
               className="group w-full bg-white text-black py-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 hover:bg-blue-500 hover:text-white transition-all duration-300 active:scale-95 shadow-xl"
             >
               <Download className="w-6 h-6" />

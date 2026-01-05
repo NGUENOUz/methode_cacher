@@ -16,11 +16,10 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ t }: HeroSectionProps) => {
-  const handleCTA = () => {
-    document
-      .getElementById("offer-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
+const handleCTA = () => {
+  // Redirection directe vers ton lien de checkout
+  window.location.href = "https://qopvpcyv.mychariow.shop/prd_nqf4um/checkout";
+};
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#F8FAFC] px-4 py-12 lg:py-24 overflow-hidden">

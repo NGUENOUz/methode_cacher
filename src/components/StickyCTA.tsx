@@ -41,7 +41,7 @@ export const StickyCTA = ({ currentPrice, symbol, ctaText }: StickyCTAProps) => 
           className="fixed bottom-4 left-0 right-0 z-[100] w-full px-4 lg:hidden flex justify-center pointer-events-none"
         >
           <button
-            onClick={scrollToOffer}
+           onClick={() => window.open('https://qopvpcyv.mychariow.shop/prd_nqf4um/checkout')}
             // pointer-events-auto : Réactive le clic uniquement sur le bouton
             className="pointer-events-auto w-full max-w-[500px] bg-slate-900/95 backdrop-blur-xl text-white p-5 rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] border border-white/20 flex items-center justify-between group overflow-hidden relative"
           >
