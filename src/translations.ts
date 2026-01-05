@@ -3,7 +3,7 @@ export const translations = {
     hero: {
       headline: "L'échec n'est plus une option",
       subheadline: "La Méthode C.A.C.H.E.R. vous guide pas à pas pour comprendre, agir, échouer intelligemment et réussir durablement.",
-      ctaPrimary: "Télécharger l'ebook maintenant",
+      ctaPrimary: "Télécharger maintenant",
       ctaSecondary: "Accès immédiat – Offre limitée",
       currentPrice: "8$",
       oldPrice: "16$",

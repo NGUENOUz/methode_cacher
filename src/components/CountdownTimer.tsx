@@ -63,7 +63,7 @@ const TimeUnit = ({ value, label }: { value: number; label: string }) => {
   return (
     <div className="relative group">
       {/* Glow d'arrière plan */}
-      <div className="absolute -inset-1 bg-blue-500/10 rounded-lg blur-md group-hover:bg-blue-500/20 transition-all" />
+      <div className="absolute -inset-1 bg-blue-600 rounded-lg  group-hover:bg-blue-500/20 transition-all" />
       
       <div className="relative flex flex-col items-center bg-white/[0.03] border border-white/10 backdrop-blur-md rounded-lg px-3 py-2 min-w-[50px] shadow-2xl">
         <AnimatePresence mode="popLayout">
@@ -78,7 +78,7 @@ const TimeUnit = ({ value, label }: { value: number; label: string }) => {
             {formattedValue}
           </motion.span>
         </AnimatePresence>
-        <span className="text-[8px] font-black text-blue-500/80 absolute -bottom-1 bg-[#08090A] px-1 px-1 border border-white/10 rounded">
+        <span className="text-[8px] font-black text-white absolute -bottom-1 bg-[#08090A] px-1 px-1 border border-white/10 rounded">
           {label}
         </span>
       </div>
