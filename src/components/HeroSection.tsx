@@ -23,7 +23,7 @@ export const HeroSection = ({ t }: HeroSectionProps) => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#F8FAFC] px-4 py-12 lg:py-24 overflow-hidden ">
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#F8FAFC] px-4 py-12 lg:py-14 overflow-hidden ">
       {/* Background Decor */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-5%] left-[-5%] w-[40%] h-[40%] bg-blue-600/5 rounded-full blur-[120px]" />
