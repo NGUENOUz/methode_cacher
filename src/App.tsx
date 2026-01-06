@@ -41,9 +41,9 @@ function App() {
             <BenefitsSection t={t.benefits} />
           </SectionWrapper>
 
-          <SectionWrapper>
+          {/* <SectionWrapper>
             <AudienceSection t={t.audience} />
-          </SectionWrapper>
+          </SectionWrapper> */}
 
           <SectionWrapper id="offer-section">
             <OfferSection

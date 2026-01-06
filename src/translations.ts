@@ -2,7 +2,8 @@ export const translations = {
   fr: {
     hero: {
       headline: "L'échec n'est plus une option",
-      subheadline: "La Méthode C.A.C.H.E.R. vous guide pas à pas pour comprendre, agir, échouer intelligemment et réussir durablement.",
+      subheadline:
+        "La Méthode C.A.C.H.E.R. vous guide pas à pas pour comprendre, agir, échouer intelligemment et réussir durablement.",
       ctaPrimary: "Télécharger maintenant",
       ctaSecondary: "Accès immédiat – Offre limitée",
       currentPrice: "8$",
@@ -12,17 +13,42 @@ export const translations = {
     },
     problem: {
       title: "Pourquoi tant de personnes échouent malgré leurs efforts ?",
-      content: "Vous avez déjà essayé de changer, de réussir, d'avancer… mais sans résultats durables ? Le problème n'est pas votre motivation, mais votre méthode.",
+      content:
+        "Vous avez déjà essayé de changer, de réussir, d'avancer… mais sans résultats durables ? Le problème n'est pas votre motivation, mais votre méthode.",
     },
     method: {
       title: "La Méthode C.A.C.H.E.R.",
       steps: [
-        { letter: "C", title: "Comprendre", description: "Identifier clairement vos blocages et objectifs." },
-        { letter: "A", title: "Agir", description: "Passer à l'action avec clarté et intention." },
-        { letter: "C", title: "Confiance", description: "Construire une confiance solide et durable." },
-        { letter: "H", title: "Humilité", description: "Accepter l'apprentissage continu." },
-        { letter: "E", title: "Échouer", description: "Transformer chaque échec en levier de progression." },
-        { letter: "R", title: "Réussir", description: "Atteindre des résultats concrets et mesurables." },
+        {
+          letter: "C",
+          title: "Comprendre",
+          description: "Identifier clairement vos blocages et objectifs.",
+        },
+        {
+          letter: "A",
+          title: "Agir",
+          description: "Passer à l'action avec clarté et intention.",
+        },
+        {
+          letter: "C",
+          title: "Confiance",
+          description: "Construire une confiance solide et durable.",
+        },
+        {
+          letter: "H",
+          title: "Humilité",
+          description: "Accepter l'apprentissage continu.",
+        },
+        {
+          letter: "E",
+          title: "Échouer",
+          description: "Transformer chaque échec en levier de progression.",
+        },
+        {
+          letter: "R",
+          title: "Réussir",
+          description: "Atteindre des résultats concrets et mesurables.",
+        },
       ],
     },
     benefits: {
@@ -85,8 +111,10 @@ export const translations = {
   },
   en: {
     hero: {
-      headline: "Transform your failures into lasting success with a simple and powerful method",
-      subheadline: "The C.A.C.H.E.R. Method guides you step by step to understand, act, fail intelligently, and succeed sustainably.",
+      headline:
+        "Transform your failures into lasting success with a simple and powerful method",
+      subheadline:
+        "The C.A.C.H.E.R. Method guides you step by step to understand, act, fail intelligently, and succeed sustainably.",
       ctaPrimary: "Download the ebook now",
       ctaSecondary: "Instant access – Limited offer",
       currentPrice: "$8",
@@ -96,17 +124,42 @@ export const translations = {
     },
     problem: {
       title: "Why do so many people fail despite their efforts?",
-      content: "Have you already tried to change, succeed, move forward… but without lasting results? The problem is not your motivation, but your method.",
+      content:
+        "Have you already tried to change, succeed, move forward… but without lasting results? The problem is not your motivation, but your method.",
     },
     method: {
       title: "The C.A.C.H.E.R. Method",
       steps: [
-        { letter: "C", title: "Comprehend", description: "Clearly identify your obstacles and goals." },
-        { letter: "A", title: "Act", description: "Take action with clarity and intention." },
-        { letter: "C", title: "Confidence", description: "Build solid and lasting confidence." },
-        { letter: "H", title: "Humility", description: "Accept continuous learning." },
-        { letter: "E", title: "Err", description: "Transform each failure into a lever for progress." },
-        { letter: "R", title: "Rise", description: "Achieve concrete and measurable results." },
+        {
+          letter: "C",
+          title: "Comprehend",
+          description: "Clearly identify your obstacles and goals.",
+        },
+        {
+          letter: "A",
+          title: "Act",
+          description: "Take action with clarity and intention.",
+        },
+        {
+          letter: "C",
+          title: "Confidence",
+          description: "Build solid and lasting confidence.",
+        },
+        {
+          letter: "H",
+          title: "Humility",
+          description: "Accept continuous learning.",
+        },
+        {
+          letter: "E",
+          title: "Err",
+          description: "Transform each failure into a lever for progress.",
+        },
+        {
+          letter: "R",
+          title: "Rise",
+          description: "Achieve concrete and measurable results.",
+        },
       ],
     },
     benefits: {
@@ -169,8 +222,10 @@ export const translations = {
   },
   es: {
     hero: {
-      headline: "Transforma tus fracasos en éxito duradero con un método simple y poderoso",
-      subheadline: "El Método C.A.C.H.E.R. te guía paso a paso para comprender, actuar, fracasar inteligentemente y tener éxito de manera sostenible.",
+      headline:
+        "Transforma tus fracasos en éxito duradero con un método simple y poderoso",
+      subheadline:
+        "El Método C.A.C.H.E.R. te guía paso a paso para comprender, actuar, fracasar inteligentemente y tener éxito de manera sostenible.",
       ctaPrimary: "Descargar el ebook ahora",
       ctaSecondary: "Acceso inmediato – Oferta limitada",
       currentPrice: "$8",
@@ -180,17 +235,42 @@ export const translations = {
     },
     problem: {
       title: "¿Por qué tantas personas fracasan a pesar de sus esfuerzos?",
-      content: "¿Ya has intentado cambiar, tener éxito, avanzar… pero sin resultados duraderos? El problema no es tu motivación, sino tu método.",
+      content:
+        "¿Ya has intentado cambiar, tener éxito, avanzar… pero sin resultados duraderos? El problema no es tu motivación, sino tu método.",
     },
     method: {
       title: "El Método C.A.C.H.E.R.",
       steps: [
-        { letter: "C", title: "Comprender", description: "Identificar claramente tus obstáculos y objetivos." },
-        { letter: "A", title: "Actuar", description: "Pasar a la acción con claridad e intención." },
-        { letter: "C", title: "Confianza", description: "Construir una confianza sólida y duradera." },
-        { letter: "H", title: "Humildad", description: "Aceptar el aprendizaje continuo." },
-        { letter: "E", title: "Errar", description: "Transformar cada fracaso en palanca de progreso." },
-        { letter: "R", title: "Realizar", description: "Alcanzar resultados concretos y medibles." },
+        {
+          letter: "C",
+          title: "Comprender",
+          description: "Identificar claramente tus obstáculos y objetivos.",
+        },
+        {
+          letter: "A",
+          title: "Actuar",
+          description: "Pasar a la acción con claridad e intención.",
+        },
+        {
+          letter: "C",
+          title: "Confianza",
+          description: "Construir una confianza sólida y duradera.",
+        },
+        {
+          letter: "H",
+          title: "Humildad",
+          description: "Aceptar el aprendizaje continuo.",
+        },
+        {
+          letter: "E",
+          title: "Errar",
+          description: "Transformar cada fracaso en palanca de progreso.",
+        },
+        {
+          letter: "R",
+          title: "Realizar",
+          description: "Alcanzar resultados concretos y medibles.",
+        },
       ],
     },
     benefits: {

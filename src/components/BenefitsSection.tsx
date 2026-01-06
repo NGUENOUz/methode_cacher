@@ -29,7 +29,7 @@ export const BenefitsSection = ({ t }: BenefitsSectionProps) => {
   };
 
   return (
-    <section ref={containerRef} className="py-32 px-4 bg-white relative">
+    <section ref={containerRef} className="py-32 px-4 bg-[#0A0C10] relative">
       
       <div className="max-w-5xl mx-auto">
         
@@ -44,7 +44,7 @@ export const BenefitsSection = ({ t }: BenefitsSectionProps) => {
             <span className="text-[10px] font-black tracking-[0.3em] text-slate-500 uppercase italic">Transformation_Step</span>
           </motion.div>
           
-          <h2 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter italic uppercase leading-[0.9]">
+          <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter italic uppercase leading-[0.9] max-w-4xl">
             {t.title}
           </h2>
         </div>
@@ -123,9 +123,9 @@ const BenefitCard = ({ text, index }: { text: string; index: number }) => {
       <div className="flex-1 space-y-4">
         <div className="flex items-center gap-3">
            <div className="h-px w-8 bg-blue-600" />
-           <span className="text-xs font-black text-blue-600 uppercase tracking-widest italic">Étape_Validation</span>
+           <span className="text-xs font-black text-blue-600 text-slate-900  uppercase tracking-widest italic">Étape_Validation</span>
         </div>
-        <h3 className="text-3xl md:text-5xl font-black text-slate-900 italic uppercase tracking-tighter leading-none">
+        <h3 className="text-3xl md:text-5xl font-black text-slate-900  text-blue-600 italic uppercase tracking-tighter leading-none">
           {text}
         </h3>
         <div className="flex items-center gap-4 pt-2">
