@@ -6,7 +6,7 @@ const detectLanguage = (): Language => {
 
   if (browserLang.startsWith('fr')) return 'fr';
   if (browserLang.startsWith('es')) return 'es';
-  return 'en';
+  return 'fr';
 };
 
 export const useTranslation = () => {
