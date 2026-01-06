@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 import { useTranslation } from "./useTranslation";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { HeroSection } from "./components/HeroSection";
@@ -61,6 +62,7 @@ function App() {
 
       <WhatsAppButton />
       <Footer t={t.footer} />
+      <Analytics />
     </div>
   );
 }
