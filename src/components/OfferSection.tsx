@@ -82,7 +82,7 @@ export const OfferSection = ({ t, countdownText, guarantees }: any) => {
         <div className="mt-16 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 opacity-40">
            <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4" />
-              <span className="text-[10px] font-black uppercase tracking-widest">Garantie 30 Jours</span>
+              <span className="text-[10px] font-black uppercase tracking-widest">Satisfait ou remboursé</span>
            </div>
            <div className="flex items-center gap-2">
               <Lock className="w-4 h-4" />

@@ -111,11 +111,10 @@ export const translations = {
   },
   en: {
     hero: {
-      headline:
-        "Transform your failures into lasting success with a simple and powerful method",
+      headline: "L'échec n'est plus une option",
       subheadline:
         "The C.A.C.H.E.R. Method guides you step by step to understand, act, fail intelligently, and succeed sustainably.",
-      ctaPrimary: "Download the ebook now",
+      ctaPrimary: "Download now",
       ctaSecondary: "Instant access – Limited offer",
       currentPrice: "$8",
       oldPrice: "$16",
