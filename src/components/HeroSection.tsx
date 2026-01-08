@@ -9,7 +9,7 @@ export const HeroSection = ({ t }: any) => {
   };
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col items-center justify-start lg:justify-center bg-[#F8FAFC] px-4 pt-4 lg:pt-0 pb-8 overflow-hidden">
+    <section className="relative min-h-screen lg:h-screen flex flex-col items-center justify-start lg:justify-center bg-[#F8FAFC] px-4 pt-2 lg:pt-(-20) pb-8 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center h-full">
 
         {/* ===================== COLONNE GAUCHE ===================== */}
@@ -129,18 +129,39 @@ export const HeroSection = ({ t }: any) => {
                 </span>
               </div>
 
-              <button
-                onClick={handleCTA}
-                className="w-full bg-blue-600 text-white py-5 rounded-2xl font-black flex flex-col items-center hover:bg-blue-700 transition-all active:scale-95 shadow-xl"
-              >
-                <div className="flex items-center gap-2">
-                  <Download className="w-5 h-5" />
-                  <span className="uppercase">Télécharger Maintenant</span>
-                </div>
-                <span className="text-[10px] opacity-80">
-                  Accès immédiat après paiement
-                </span>
-              </button>
+            <button
+  onClick={handleCTA}
+  className="w-full relative overflow-hidden bg-blue-600 text-white py-4 rounded-xl font-black text-sm flex flex-col items-center justify-center gap-0 hover:bg-blue-700 transition-all active:scale-95 shadow-[0_10px_20px_-5px_rgba(37,99,235,0.4)]"
+>
+  {/* BANDE LUMINEUSE (Shimmer Effect) */}
+  <motion.div
+    initial={{ x: "-100%" }}
+    animate={{ x: "200%" }}
+    transition={{
+      repeat: Infinity,
+      duration: 2.5,
+      ease: "linear",
+      repeatDelay: 1,
+    }}
+    className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+  />
+
+  {/* CONTENU DU BOUTON */}
+  <div className="relative z-10 flex flex-col items-center justify-center">
+    <div className="flex items-center gap-2">
+      <motion.div
+        animate={{ y: [0, 2, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+      >
+        <Download className="w-4 h-4" />
+      </motion.div>
+      <span className="tracking-tight">TÉLÉCHARGER MAINTENANT</span>
+    </div>
+    <span className="text-[8px] opacity-80 font-medium tracking-normal mt-0.5">
+      Ebook envoyé par email immédiatement
+    </span>
+  </div>
+</button>
 
               <div className="grid grid-cols-2 gap-3 w-full mt-6 pt-5 border-t">
                 <div className="flex items-center gap-1.5">
