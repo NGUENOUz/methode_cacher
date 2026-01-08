@@ -9,7 +9,7 @@ export const HeroSection = ({ t }: any) => {
   };
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col items-center justify-start lg:justify-center bg-[#F8FAFC] px-4 pt-2 lg:pt-(-20) pb-8 overflow-hidden">
+    <section className="relative min-h-screen lg:h-screen flex flex-col items-center justify-start lg:justify-center bg-[#F8FAFC] px-4 -mt-5 pt-0 lg:pt-0 -mt-11 pb-8 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center h-full">
 
         {/* ===================== COLONNE GAUCHE ===================== */}
