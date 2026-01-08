@@ -18,6 +18,7 @@ import { AuthorSection } from "./components/AuthorSection";
 
 // Importe ton nouveau Dashboard
 import { AdminDashboard } from "./components/AdminDashboard";
+import { ExitIntentChat } from "./components/ExitIntentChat";
 
 function App() {
   const { t } = useTranslation();
@@ -72,6 +73,9 @@ function App() {
               <SectionWrapper>
                 <FAQSection t={t.faq} />
               </SectionWrapper>
+
+                <ExitIntentChat />
+
             </div>
           </main>
 
