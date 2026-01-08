@@ -55,13 +55,12 @@ export const CountdownTimer = ({ text }: CountdownTimerProps) => {
     </div>
   );
 };
-
-const TimeUnit = ({ value, label }: { value: number; label: string }) => {
+const TimeUnit = ({ value, label, isDark }: { value: number; label: string; isDark?: boolean }) => {
   const formattedValue = String(value).padStart(2, '0');
 
   return (
     <div className="flex items-baseline gap-0.5">
-      <div className="overflow-hidden h-7 flex items-center">
+      <div className="overflow-hidden h-8 flex items-center">
         <AnimatePresence mode="popLayout">
           <motion.span
             key={formattedValue}
@@ -69,13 +68,13 @@ const TimeUnit = ({ value, label }: { value: number; label: string }) => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -15, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-            className="text-xl font-medium text-slate-900 tabular-nums tracking-tight"
+            className={`text-2xl font-black tabular-nums tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}
           >
             {formattedValue}
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="text-[10px] font-bold text-blue-600/50 uppercase tracking-tighter">
+      <span className={`text-[10px] font-bold uppercase tracking-tighter ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
         {label}
       </span>
     </div>
