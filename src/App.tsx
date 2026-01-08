@@ -75,7 +75,7 @@ function App() {
             </div>
           </main>
 
-          <WhatsAppButton />
+          {/* <WhatsAppButton /> */}
           <Footer t={t.footer} />
         </div>
       } />

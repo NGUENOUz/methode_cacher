@@ -1,133 +1,167 @@
-import { Download, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
+import { Download, Zap, FileText, CheckCircle2, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { CountdownTimer } from "./CountdownTimer";
 
-interface HeroSectionProps {
-  t: {
-    headline: string;
-    subheadline: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-    currentPrice: string;
-    oldPrice: string;
-    badge: string;
-    countdownText: string;
-  };
-}
-
-export const HeroSection = ({ t }: HeroSectionProps) => {
+export const HeroSection = ({ t }: any) => {
   const handleCTA = () => {
-    // Redirection directe vers ton lien de checkout
     window.location.href =
       "https://qopvpcyv.mychariow.shop/prd_nqf4um/checkout";
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#F8FAFC] px-4 py-12 lg:py-14 overflow-hidden ">
-      {/* Background Decor */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-5%] left-[-5%] w-[40%] h-[40%] bg-blue-600/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-5%] right-[-5%] w-[40%] h-[40%] bg-emerald-500/5 rounded-full blur-[120px]" />
-      </div>
+    <section className="relative min-h-screen lg:h-screen flex flex-col items-center justify-start lg:justify-center bg-[#F8FAFC] px-4 pt-4 lg:pt-0 pb-8 overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 items-center h-full">
 
-      <div className="max-w-7xl mx-auto w-full">
-        {/* Layout : Titre en haut sur mobile, Mockup/Prix en grille sur desktop */}
-        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* 1. TITRE & DESCRIPTION (4 colonnes sur Desktop) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-4 space-y-8 text-center lg:text-left"
-          >
-            <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-700">
-                {t.badge}
-              </span>
-            </div>
+        {/* ===================== COLONNE GAUCHE ===================== */}
+        <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-3 lg:space-y-6">
 
-            <h1 className="text-5xl sm:text-6xl font-black text-slate-900 leading-[0.9] tracking-tighter italic uppercase">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-1 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5 lg:px-3 lg:py-1">
+            <span className="text-[10px] lg:text-xs font-black uppercase tracking-wider text-emerald-700">
+              +1,200 Entrepreneurs Formés
+            </span>
+          </div>
+
+          {/* Headline */}
+          <div className="space-y-1 lg:space-y-3">
+            <h1 className="text-3xl lg:text-5xl xl:text-6xl font-black text-slate-900 leading-[0.9] tracking-tighter italic uppercase">
               {t.headline}
             </h1>
-
-            <p className="text-lg text-slate-500 leading-relaxed font-medium italic">
+            <p className="text-[12px] lg:text-lg text-slate-600 font-medium max-w-[300px] lg:max-w-xl">
               {t.subheadline}
             </p>
-          </motion.div>
+          </div>
 
-          {/* 2. LE MOCKUP (4 colonnes sur Desktop) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="lg:col-span-4 w-full flex justify-center"
-          >
-            <div className="relative group w-full max-w-[300px] lg:max-w-full lg:px-4">
-              <div className="p-3 bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 rotate-2 group-hover:rotate-0 transition-transform duration-500">
-                <img
-                  src="https://res.cloudinary.com/dcsl6xhli/image/upload/v1767622977/1766986526_xe5bbx.png"
-                  alt="Ebook Cover"
-                  className="w-full h-auto rounded-[1.8rem]"
-                />
-              </div>
+          {/* Stars */}
+          <div className="flex items-center gap-1">
+            {[1, 2, 3, 4, 5].map((s) => (
+              <Star
+                key={s}
+                className="w-3 h-3 lg:w-4 lg:h-4 fill-amber-400 text-amber-400"
+              />
+            ))}
+            <span className="text-[9px] lg:text-xs font-bold text-slate-400 ml-2 uppercase">
+              4.9/5 satisfaction
+            </span>
+          </div>
+
+          {/* ===================== MOCKUP EBOOK — MOBILE + DESKTOP ===================== */}
+          <div className="relative w-44 lg:hidden mt-3">
+            <motion.img
+              initial={{ rotate: -5, scale: 0.9 }}
+              animate={{ rotate: -2, scale: 1 }}
+              src="https://res.cloudinary.com/dcsl6xhli/image/upload/v1767622977/1766986526_xe5bbx.png"
+              alt="Ebook"
+              className="w-full h-auto rounded-xl shadow-2xl"
+            />
+            <div className="absolute -bottom-2 -right-2 bg-white border border-slate-100 px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+              <FileText className="w-3 h-3 text-blue-600" />
+              <span className="text-[8px] font-black text-slate-700 uppercase">
+                PDF 4.2 MB
+              </span>
             </div>
-          </motion.div>
+          </div>
 
-          {/* 3. LE BLOC DE CONVERSION UNIFIÉ (4 colonnes sur Desktop) */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="lg:col-span-4 w-full"
-          >
-            <div className="bg-white border border-slate-100 rounded-[3rem] p-8 lg:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] flex flex-col gap-8 relative overflow-hidden">
-              {/* Effet visuel discret en fond de carte */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -mr-16 -mt-16" />
+          {/* ===================== ZONE DESKTOP : EBOOK + PROJECTION ===================== */}
+          <div className="hidden lg:grid grid-cols-2 gap-8 items-start pt-4">
 
-              {/* PRIX */}
-              <div className="flex items-center justify-center lg:justify-start gap-4">
-                <span className="text-7xl font-black text-slate-900 tracking-tighter italic leading-none">
-                  {t.currentPrice}
+            {/* Ebook Desktop */}
+            <div className="relative w-64 xl:w-72">
+              <motion.img
+                initial={{ rotate: -5, scale: 0.9 }}
+                animate={{ rotate: -2, scale: 1 }}
+                src="https://res.cloudinary.com/dcsl6xhli/image/upload/v1767622977/1766986526_xe5bbx.png"
+                alt="Ebook"
+                className="w-full h-auto rounded-xl shadow-2xl"
+              />
+              <div className="absolute -bottom-2 -right-2 bg-white border border-slate-100 px-2 py-1 rounded-lg shadow-lg flex items-center gap-1.5">
+                <FileText className="w-3 h-3 text-blue-600" />
+                <span className="text-[10px] font-black text-slate-700 uppercase">
+                  PDF 4.2 MB
                 </span>
-                <div className="flex flex-col">
-                  <span className="text-xl text-slate-300 line-through font-light leading-none italic">
-                    {t.oldPrice}
-                  </span>
-                  <span className="text-[10px] font-black text-emerald-600 tracking-[0.2em] mt-1">
-                    OFFRE_ACTIVE
-                  </span>
-                </div>
-              </div>
-
-              {/* TIMER */}
-              <div className="py-6 border-y border-slate-50">
-                <p className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4 text-center lg:text-left">
-                  Expiration de la session :
-                </p>
-                <CountdownTimer text={t.countdownText} />
-              </div>
-
-              {/* BOUTON & TRUST */}
-              <div className="space-y-4">
-                <button
-                  onClick={handleCTA}
-                  className="w-full group bg-slate-900 text-white p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 hover:bg-blue-600 transition-all duration-300 shadow-xl active:scale-95"
-                >
-                  <Download className="w-6 h-6 group-hover:translate-y-0.5 transition-transform" />
-                  {t.ctaPrimary}
-                </button>
-
-                <div className="flex items-center justify-center gap-4 pt-2">
-                  <div className="flex items-center gap-1.5 text-[9px] font-black text-slate-400 tracking-widest uppercase">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-                    SSL_SECURED
-                  </div>
-                  <div className="w-1 h-1 bg-slate-200 rounded-full" />
-                  <div className="text-[9px] font-black text-slate-400 tracking-widest uppercase">
-                    {t.ctaSecondary}
-                  </div>
-                </div>
               </div>
             </div>
-          </motion.div>
+
+            {/* Projection mentale */}
+            <div className="flex flex-col gap-4 justify-center max-w-md">
+              <p className="text-sm font-black uppercase tracking-wide text-slate-400">
+                Ce que tu vas obtenir
+              </p>
+
+              <ul className="space-y-3">
+                {[
+                  "Comprendre pourquoi tu échoues vraiment",
+                  "Corriger ce qui bloque ta progression",
+                  "Avancer avec une méthode claire et durable",
+                  "Éviter les erreurs qui font abandonner",
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5" />
+                    <span className="text-sm font-semibold text-slate-700">
+                      {text}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wide">
+                Basé sur la méthode C.A.C.H.E.R.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* ===================== COLONNE DROITE ===================== */}
+        <div className="lg:col-span-5 w-full mt-6 lg:mt-0 max-w-md lg:max-w-sm xl:max-w-md mx-auto">
+          <div className="bg-white border border-blue-600/10 rounded-3xl p-5 lg:p-8 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] relative">
+
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[9px] lg:text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
+              Offre de lancement
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-5xl lg:text-7xl font-black text-slate-900 italic">
+                  8$
+                </span>
+                <span className="text-lg text-slate-300 line-through italic">
+                  16$
+                </span>
+              </div>
+
+              <button
+                onClick={handleCTA}
+                className="w-full bg-blue-600 text-white py-5 rounded-2xl font-black flex flex-col items-center hover:bg-blue-700 transition-all active:scale-95 shadow-xl"
+              >
+                <div className="flex items-center gap-2">
+                  <Download className="w-5 h-5" />
+                  <span className="uppercase">Télécharger Maintenant</span>
+                </div>
+                <span className="text-[10px] opacity-80">
+                  Accès immédiat après paiement
+                </span>
+              </button>
+
+              <div className="grid grid-cols-2 gap-3 w-full mt-6 pt-5 border-t">
+                <div className="flex items-center gap-1.5">
+                  <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                  <span className="text-[10px] font-bold text-slate-500 uppercase">
+                    Accès Direct
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                  <span className="text-[10px] font-bold text-slate-500 uppercase">
+                    Paiement Sécurisé
+                  </span>
+                </div>
+              </div>
+
+              <div className="w-full mt-5">
+                <CountdownTimer text="L'offre se termine dans :" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

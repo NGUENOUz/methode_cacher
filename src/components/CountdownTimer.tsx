@@ -32,56 +32,52 @@ export const CountdownTimer = ({ text }: CountdownTimerProps) => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center md:items-start gap-4 p-2">
-      {/* Label avec petit voyant "Live" */}
-      <div className="flex items-center gap-2">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+    <div className="flex flex-col items-center lg:items-start gap-2">
+      {/* Label Minimaliste */}
+      <div className="flex items-center gap-1.5 opacity-60">
+        <span className="relative flex h-1.5 w-1.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
         </span>
-        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 font-mono">
+        <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">
           {text}
         </span>
       </div>
 
-      {/* Timer Container */}
-      <div className="flex items-center gap-1.5 font-mono">
-        <TimeUnit value={timeLeft.hours} label="H" />
-        <span className="text-xl font-black text-slate-700 animate-pulse">:</span>
-        <TimeUnit value={timeLeft.minutes} label="M" />
-        <span className="text-xl font-black text-slate-700 animate-pulse">:</span>
-        <TimeUnit value={timeLeft.seconds} label="S" />
+      {/* Timer Fin & Élégant */}
+      <div className="flex items-center gap-3">
+        <TimeUnit value={timeLeft.hours} label="h" />
+        <span className="text-slate-300 font-light">:</span>
+        <TimeUnit value={timeLeft.minutes} label="m" />
+        <span className="text-slate-300 font-light">:</span>
+        <TimeUnit value={timeLeft.seconds} label="s" />
       </div>
     </div>
   );
 };
 
-// Sous-composant pour chaque unité de temps (Premium Glass look)
 const TimeUnit = ({ value, label }: { value: number; label: string }) => {
   const formattedValue = String(value).padStart(2, '0');
 
   return (
-    <div className="relative group">
-      {/* Glow d'arrière plan */}
-      <div className="absolute -inset-1 bg-blue-600 rounded-lg  group-hover:bg-blue-500/20 transition-all" />
-      
-      <div className="relative flex flex-col items-center bg-white/[0.03] border border-white/10 backdrop-blur-md rounded-lg px-3 py-2 min-w-[50px] shadow-2xl">
+    <div className="flex items-baseline gap-0.5">
+      <div className="overflow-hidden h-7 flex items-center">
         <AnimatePresence mode="popLayout">
           <motion.span
             key={formattedValue}
-            initial={{ y: 10, opacity: 0 }}
+            initial={{ y: 15, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="text-2xl md:text-3xl font-black text-white tracking-tighter"
+            exit={{ y: -15, opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+            className="text-xl font-medium text-slate-900 tabular-nums tracking-tight"
           >
             {formattedValue}
           </motion.span>
         </AnimatePresence>
-        <span className="text-[8px] font-black text-white absolute -bottom-1 bg-[#08090A] px-1 px-1 border border-white/10 rounded">
-          {label}
-        </span>
       </div>
+      <span className="text-[10px] font-bold text-blue-600/50 uppercase tracking-tighter">
+        {label}
+      </span>
     </div>
   );
 };
