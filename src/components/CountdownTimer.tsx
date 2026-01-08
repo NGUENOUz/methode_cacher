@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface CountdownTimerProps {
   text: string;
+  isDark?: boolean; // Ajouté ici pour pouvoir le contrôler de l'extérieur
 }
 
-export const CountdownTimer = ({ text }: CountdownTimerProps) => {
+export const CountdownTimer = ({ text, isDark }: CountdownTimerProps) => {
   const calculateTimeLeft = () => {
     const now = new Date();
     const endTime = new Date();
@@ -39,22 +40,24 @@ export const CountdownTimer = ({ text }: CountdownTimerProps) => {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
         </span>
-        <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">
+        <span className={`text-[9px] font-bold uppercase tracking-[0.15em] ${isDark ? 'text-slate-300' : 'text-slate-500'}`}>
           {text}
         </span>
       </div>
 
       {/* Timer Fin & Élégant */}
       <div className="flex items-center gap-3">
-        <TimeUnit value={timeLeft.hours} label="h" />
+        {/* On transmet isDark à chaque TimeUnit ici bas */}
+        <TimeUnit value={timeLeft.hours} label="h" isDark={isDark} />
         <span className="text-slate-300 font-light">:</span>
-        <TimeUnit value={timeLeft.minutes} label="m" />
+        <TimeUnit value={timeLeft.minutes} label="m" isDark={isDark} />
         <span className="text-slate-300 font-light">:</span>
-        <TimeUnit value={timeLeft.seconds} label="s" />
+        <TimeUnit value={timeLeft.seconds} label="s" isDark={isDark} />
       </div>
     </div>
   );
 };
+
 const TimeUnit = ({ value, label, isDark }: { value: number; label: string; isDark?: boolean }) => {
   const formattedValue = String(value).padStart(2, '0');
 

@@ -78,7 +78,7 @@ export const OfferSection = ({ t, countdownText, guarantees }: any) => {
             {/* L'élément qui manquait : L'urgence visible */}
             <div className="space-y-8">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                <CountdownTimer text={countdownText} />
+                <CountdownTimer text={countdownText} isDark={true}/>
               </div>
               
               <div className="space-y-4">
