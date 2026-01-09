@@ -10,7 +10,7 @@ import { MethodSection } from "./components/MethodSection";
 import { BenefitsSection } from "./components/BenefitsSection";
 import { OfferSection } from "./components/OfferSection";
 import { FAQSection } from "./components/FAQSection";
-import { WhatsAppButton } from "./components/WhatsappButon";
+
 import { Footer } from "./components/Footer";
 import { StickyCTA } from "./components/StickyCTA";
 import { AuthorSection } from "./components/AuthorSection";
@@ -19,6 +19,7 @@ import { AuthorSection } from "./components/AuthorSection";
 // Importe ton nouveau Dashboard
 import { AdminDashboard } from "./components/AdminDashboard";
 import { ExitIntentChat } from "./components/ExitIntentChat";
+import { GlobalAfricaBanner } from "./components/GlobalAfricaBanner";
 
 function App() {
   const { t } = useTranslation();
@@ -36,6 +37,7 @@ function App() {
       <Route path="/" element={
         <div className="min-h-screen bg-[#FAFAFA] text-slate-900 selection:bg-blue-100 selection:text-blue-900">
           
+              <GlobalAfricaBanner/>
           
           <main className="pt-16"> {/* padding-top pour le header fixe */}
             <StickyCTA 
@@ -75,7 +77,7 @@ function App() {
               </SectionWrapper>
 
                 <ExitIntentChat />
-
+             
             </div>
           </main>
 
